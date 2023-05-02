@@ -1,0 +1,29 @@
+{
+  "name": "voting-system",
+  "version": "0.0.1",
+  "description": "simple voting system in php",
+  "main": "index.js",
+  "scripts": {
+    "test": "phpunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elite-coder-5150/voting-system.git"
+  },
+  "keywords": [
+    "voting",
+    "php",
+    "phpunit",
+    "bootstrap"
+  ],
+  "author": "Darrell Parkhouse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elite-coder-5150/voting-system/issues"
+  },
+  "homepage": "https://github.com/elite-coder-5150/voting-system#readme",
+  "devDependencies": {
+    "bootstrap": "^5.2.3",
+    "font-awesome": "^4.7.0"
+  }
+}
