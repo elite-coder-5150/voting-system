@@ -1,50 +1,30 @@
-create table `admin`
+create table `votes`
 (
-    `id`         int(11)      NOT NULL AUTO_INCREMENT,
-    primary key (`id`),
-    `username`   varchar(255) NOT NULL,
-    `password`   varchar(60)  not null,
-    `first_name` varchar(255) NOT NULL,
-    `last_name`  varchar(255) NOT NULL,
-    `email`      varchar(255) NOT NULL,
-    `avatar`     varchar(255) NOT NULL,
-    `avatar_url` varchar(255) NOT NULL,
-    `created_at` timestamp    NOT NULL DEFAULT CURRENT_TIMESTAMP
+    `vote_id`      int(11) unsigned NOT NULL auto_increment,
+    primary key (`vote_id`),
+    `position_id`  int(11) unsigned NOT NULL,
+    `candidate_id` int(11) unsigned NOT NULL,
+    `voters_id`    int(11) unsigned NOT NULL
 );
 
 create table `candidates`
 (
-    `candidate_id` int(11)      NOT NULL,
+    `candidate_id` int(11) unsigned NOT NULL auto_increment,
     primary key (`candidate_id`),
-    `position_id`  int(11)      NOT NULL,
-    `first_name`   varchar(255) NOT NULL,
-    `last_name`    varchar(255) NOT NULL,
-    `avatar`       varchar(150) not null,
-    `platform`     text         not null
+    `first_name`   varchar(255)     NOT NULL,
+    `last_name`    varchar(255)     NOT NULL
 );
 
 create table `positions`
 (
-    `position_id` int(11) unsigned NOT NULL,
-    `description` varchar(255)     NOT NULL,
-    `max_vote`    int(11) unsigned NOT NULL,
-    `priority`    int(11) unsigned NOT NULL
+    `position_id`   int(11) unsigned NOT NULL,
+    primary key (`position_id`),
+    `position_name` varchar(255)     NOT NULL,
+    `priority`      int(11) unsigned NOT NULL
 );
 
 create table `voters`
 (
-    `voter_id`   int(11) unsigned NOT NULL,
-    `password`   varchar(255)     NOT NULL,
-    `first_name` varchar(255)     NOT NULL,
-    `last_name`  varchar(255)     NOT NULL,
-    `avatar_url` varchar(255)     not null
+    `voter_id` int(11) unsigned NOT NULL,
+    `name`     varchar(255)     NOT NULL
 );
-
-create table `total_votes`
-(
-    `id`           int(11) unsigned NOT NULL,
-    primary key (`id`),
-    `candidate_id` int(11) unsigned NOT NULL,
-    `position`     varchar(255)     NOT NULL
-);
-
