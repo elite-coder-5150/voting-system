@@ -28,3 +28,10 @@ create table `voters`
     `voter_id` int(11) unsigned NOT NULL,
     `name`     varchar(255)     NOT NULL
 );
+
+create table `admin`
+(
+    `admin_id` int(11) unsigned NOT NULL,
+    `username` varchar(255) NOT NULL,
+    `password` varchar(255) NOT NULL
+)
