@@ -37,7 +37,7 @@ The system automatically tallies the votes and generates a report of the results
 votes each candidate received, as well as the percentage of the total votes. The report is only available to
 administrators and is not accessible to users.
 
-#### Security
+#### Security     
 
 The voting system is designed with security and privacy in mind. The system ensures that only registered users are
 allowed to vote, and that each user can vote only once. User information is stored securely in the database, and the
