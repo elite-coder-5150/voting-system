@@ -31,7 +31,7 @@
             </header>
             
             <div class="card-body">
-                <form action="add_candidate.php" 
+                <form action="../add_candidate.php"
                       enctype="multipart/form-data" 
                       class="form-horizontal" 
                       method="post">
